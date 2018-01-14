@@ -41,7 +41,5 @@ At first I'll make a simple single page site and make it all fancy and mobile re
 * [Me](https://github.com/bephrem1/) - Backend Developer (Some Frontend)
 * [Michael Weinberger](https://github.com/mwein99) - Frontend Developer
 
-* [This Application Uses The MEAN Stack](http://mean.io/)...almost...have to learn AngularJS
-
 ## Credits
 * [Flaticon](https://www.flaticon.com/) - Icon assets
