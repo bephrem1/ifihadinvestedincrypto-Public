@@ -3,9 +3,9 @@ __________________________________________
 A Node.JS Application That Helps People Understand Their Investment Shortcomings and Feel Bad About It. </br>
 __________________________________________
 
-**School Year:** Freshman @ University of Maryland (class of 2021) </br>
+**School Year (Mine & Michael's):** Freshman @ University of Maryland (class of 2021) </br>
 
-## Site Will Be Live At : http://ifihadinvestedincrypto.com/
+## Site Will Be Live At : http://www.ifihadinvestedincrypto.com/
 #### Site Is Built From Scratch. </br>
 #### This is a public repo just to display a journal up to launch.</br>
 
