@@ -32,6 +32,11 @@ At first I'll make a simple single page site and make it all fancy and mobile re
 Michael Made The Site Look A Lot Nicer </br>
 <a href="http://ibb.co/i1MGsR"><img src="http://preview.ibb.co/gDLnz6/Screen_Shot_2018_01_15_at_1_00_06_AM.png" alt="Screen_Shot_2018_01_15_at_1_00_06_AM" border="0"></a> </br> </br>
 
+## Challenges Encountered </br>
+</br>
+1.) Working with 25+ foreign currencues and dates is a pain in the 🐴. Nuff said.
+
+
 ## Built With
 * [Node.js](https://nodejs.org/en/) - Event-Driver Server-side Platform used
 * [Express.js](https://expressjs.com/) - Node.js web application framework used
