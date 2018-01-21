@@ -35,6 +35,8 @@ Michael Made The Site Look A Lot Nicer </br>
 ## Challenges Encountered </br>
 1.) Working with 25+ foreign currencies and dates is a pain in the 🐴. Nuff said. </br>
 </br>
+2.) Async JS and Promises and requests flying everywhere. Nuff nuff said. </br>
+</br>
 
 ## Built With
 * [Node.js](https://nodejs.org/en/) - Event-Driver Server-side Platform used
