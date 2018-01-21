@@ -33,7 +33,7 @@ Michael Made The Site Look A Lot Nicer </br>
 <a href="http://ibb.co/i1MGsR"><img src="http://preview.ibb.co/gDLnz6/Screen_Shot_2018_01_15_at_1_00_06_AM.png" alt="Screen_Shot_2018_01_15_at_1_00_06_AM" border="0"></a> </br> </br>
 
 ## Challenges Encountered </br>
-1.) Working with 25+ foreign currencues and dates is a pain in the 🐴. Nuff said. </br>
+1.) Working with 25+ foreign currencies and dates is a pain in the 🐴. Nuff said. </br>
 </br>
 
 ## Built With
