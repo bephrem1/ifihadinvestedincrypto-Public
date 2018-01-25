@@ -50,8 +50,21 @@ This is where the magic happens. So let me walk down the app.js file that the cl
 So first we define global variables for what we will need for the calculation. These variables are initialized with what the user sees as placeholders and everytime an input field is updated these global variables are updated as well (the data is extracted from the DOM) so they can be used whenever a user wants to perform the calculation.
 
 #### Helper Functions </br>
-I'll talk about helper functions here since I know they get hoisted (that word makes me sound smart) at compile time although we put them at the bottom of the file. We have helpers for:
-- 
+I'll talk about helper functions here since I know they get hoisted (that word makes me sound smart) at compile time although we put them at the bottom of the file. We have helpers for: </br>
+- Checking everytime an input field was updated whether the company had existed at that time and warning the user of a possibly impossible calculation
+- Converting a month, day, and year to epoch time for time comparison and api calls
+- Formatting any raw number with commas appropriately
+- Purging a number of commas
+- A simple currency conversion function that takes an amount and the conversion rate
+- A function for calculation investment profit given start investment, # of shares purchased, and the ending value of the asset
+- A custom animation function that takes a number to count up to and the jQuery object target of the animation. It dynamically adjusts to the number's size so the countUpTo animation is the perfect length
+
+#### Promise Factory Functions </br>
+Then we have some functions that serve up helpful promises that avoid tight coupling in the onclick code and of course allow us to wait for certain operations to happen before we proceed with a certain calculation etc. These functions return promises to be executed later and can be configured by what you pass into the function. We have:
+- A function that returns a promise for a fetch of a crypto's value today in a currency of choice
+- A function that resolves a promise for of how many shares you could've bought with the input amount and currency type. It pass the numShares bought, foreignExchangeRate of the currency to USD for later calculations if it isn't in USD, and whether the result isZero (a boolean). The next promise in execution will consume this information.
+- Finally there is a convert currency function that returns a promise that will return an amount converted from a curreny to an end currency using currencyconverterapi.com
+<b>- These all combine to form the core functionality onclick plus some side logic</b>
 
 #### Utility Objects </br>
 We then have JS objects that contain companies start dates etc. For input validation (to prevent a user trying to calculate how much they would've made investing in a company before it went public). There is also the JS object of the potentialItems that populate the drawer after a price is calculated and a later helper function spits out some items that could've been bought as well as what would've been leftover.
