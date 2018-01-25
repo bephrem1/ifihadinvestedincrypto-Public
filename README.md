@@ -10,7 +10,8 @@ __________________________________________
 #### This is a public repo just to display a journal up to launch.</br>
 
 **Project Start Date:** 1/14/18 </br>
-**v1.0.0 Published:** TBD </br>
+**v1.0.0 Published:** 1/21/18 </br>
+**v1.1.0 Published:** TBD </br>
 
 #### The Problem:
 You know those people that always see a stock or asset skyrocket in value and then say, "Yeah...I called it. IF I HAD INVESTED IN *insert asset* I WOULD BE RICH!". With crypto currencies seeing a huge explosion in popularity more and more often do we hear out close friends or even family say that about the infamous [Bitcoin](https://www.investopedia.com/articles/investing/123015/if-you-had-purchased-100-bitcoins-2011.asp). I thought all of this was pretty funny and later this idea came to me from nowhere while I was taking a shower.
@@ -31,6 +32,35 @@ At first I'll make a simple single page site and make it all fancy and mobile re
 ### Day One Pt. 3
 Michael Made The Site Look A Lot Nicer </br>
 <a href="http://ibb.co/i1MGsR"><img src="http://preview.ibb.co/gDLnz6/Screen_Shot_2018_01_15_at_1_00_06_AM.png" alt="Screen_Shot_2018_01_15_at_1_00_06_AM" border="0"></a> </br> </br>
+
+## How It Works: </br>
+So when the idea first came to mind I knew that I just wanted to make a minimalist 1 page application for this (the drawer feature with "What You Could've Bought" was later thought of later). I knew that working with currency and dates would be annoying but knew it'd be cool to support a ton of currencies just for the heck of it and dates. Michael was a crucial part in helping refine the logic of the application and in imporving the UX. I'll be looking thorugh the code as I write this "how it works" so it'll be sort of like a conversation. </br>
+
+### Server Side </br>
+Um...not much serverside processing happens for this application. Michael and I knew page reloads (like what is caused by a call to the server and a redirect) would be a hitch to a pretty and smooth UX so all the currency logic, api calls encapsulated in promises, etc. are clientside served in the app.js file. I personally saw that there wouldn't be anything too rigorous that would require talking to the server and no data needs to be persisted so...yeah...all the more for having all operations on the client as of now. </br>
+
+We have the app.js file where imported middleware is initialized like storing session data, setting up static asset pointers, and attatching the separate route file (index.js) to the base uri '/' which is the root. app.js finishes out with an error handler to catch 404's and other errors. Finally, the fully configured app variable is passed to bin/www.js where the server is actually started taking into account the environment (if process.env.PORT is defined then it is started on that port. If not then the default is port 3000). </br>
+
+Like I said, there is a separate index.js file for routing requests. There are only two routes. A route for '/' and a route for '/contact'. Nothin' too crazy. At the end of index.js the router is exported to be consumed by app.js (which like I said before pass a fully configured app to bin/www.js for starting the application). </br>
+
+### Client Side </br>
+This is where the magic happens. So let me walk down the app.js file that the client receives and just discuss things: </br>
+
+#### Global Variables </br>
+So first we define global variables for what we will need for the calculation. These variables are initialized with what the user sees as placeholders and everytime an input field is updated these global variables are updated as well (the data is extracted from the DOM) so they can be used whenever a user wants to perform the calculation.
+
+#### Helper Functions </br>
+I'll talk about helper functions here since I know they get hoisted (that word makes me sound smart) at compile time although we put them at the bottom of the file. We have helpers for:
+- 
+
+#### Utility Objects </br>
+We then have JS objects that contain companies start dates etc. For input validation (to prevent a user trying to calculate how much they would've made investing in a company before it went public). There is also the JS object of the potentialItems that populate the drawer after a price is calculated and a later helper function spits out some items that could've been bought as well as what would've been leftover.
+
+#### Fetch On Page Load </br>
+So we know that daily bitcoin's value changes. It is the default currency we have set for the site on page load. So what we do is just leave $X,XXX,XXX in the field and on page load a get request is made to the cryptocompare.com api (where we get our crypto price data) and we do all of our calculations immediately then use a formatting helper function before we inject the final result into the value field.
+
+#### Input Box Change Listeners </br>
+Then we have all of our listeners that update the global variables
 
 ## Challenges Encountered </br>
 1.) Working with 25+ foreign currencies and dates is a pain in the 🐴. Nuff said. </br>
