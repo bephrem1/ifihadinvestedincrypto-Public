@@ -6,8 +6,9 @@ __________________________________________
 **School Year (Mine & Michael's):** Freshman @ University of Maryland (class of 2021) </br>
 
 ## Site Will Be Live At : http://www.ifihadinvestedincrypto.com/
-#### Site Is Built From Scratch. </br>
-#### This is a public repo just to display a journal up to launch.</br>
+<b>Note:</b> The site will take about 5-10 seconds to load since it is running on a free Heroku Dyno. A Heroku Dyno basically follows a ServiceBus-Worker architecture where requests will be recieved by a client facing Web Role that directs them to a ServiceBus which holds a Queue of requests to be processed. The Worker Role will then poll the ServiceBus queue and have the business logic to process requests and do whatever (persist data to db, fetch stuff, etc.). When you have a free Heroku plan, the web dynos sleep leading to bad loading time on first request since the dyno has to "wake-up". After a period of inactivity it will sleep again. This is why the loading sucks. [More On Dynos Here](https://www.heroku.com/dynos)
+#### Site Is Built From Scratch.
+#### This is a public repo just to display a journal up to launch.
 
 **Project Start Date:** 1/14/18 </br>
 **v1.0.0 Published:** 1/21/18 </br>
