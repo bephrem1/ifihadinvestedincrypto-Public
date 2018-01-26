@@ -80,6 +80,9 @@ So we know that daily bitcoin's value changes. It is the default currency we hav
 #### Input Box Change Listeners </br>
 Then we have all of our listeners that update the global variables
 
+#### Button OnClick Logic </br>
+Explanation Coming Soon...
+
 ## Challenges Encountered </br>
 1.) Working with 25+ foreign currencies and dates is a pain in the 🐴. Nuff said. </br>
 </br>
