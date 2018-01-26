@@ -37,7 +37,9 @@ Michael Made The Site Look A Lot Nicer </br>
 <a href="http://ibb.co/i1MGsR"><img src="http://preview.ibb.co/gDLnz6/Screen_Shot_2018_01_15_at_1_00_06_AM.png" alt="Screen_Shot_2018_01_15_at_1_00_06_AM" border="0"></a> </br> </br>
 
 ## How It Works: </br>
-So when the idea first came to mind I knew that I just wanted to make a minimalist 1 page application for this (the drawer feature with "What You Could've Bought" was later thought of later). I knew that working with currency and dates would be annoying but knew it'd be cool to support a ton of currencies just for the heck of it and dates. Michael was a crucial part in helping refine the logic of the application and in imporving the UX. I'll be looking thorugh the code as I write this "how it works" so it'll be sort of like a conversation. </br>
+So when the idea first came to mind I knew that I just wanted to make a minimalist 1 page application for this (the drawer feature with "What You Could've Bought" was later thought of later). I knew that working with currency and dates would be annoying but knew it'd be cool to support a ton of currencies just for the heck of it and dates. Michael was a crucial part in helping refine the logic of the application and in imporving the UX.
+
+I'll be looking thorugh the code as I write this "how it works" so it'll be sort of like a conversation. </br>
 
 ### Server Side </br>
 Um...not much serverside processing happens for this application. Michael and I knew page reloads (like what is caused by a call to the server and a redirect) would be a hitch to a pretty and smooth UX so all the currency logic, api calls encapsulated in promises, etc. are clientside served in the app.js file. I personally saw that there wouldn't be anything too rigorous that would require talking to the server and no data needs to be persisted so...yeah...all the more for having all operations on the client as of now. </br>
