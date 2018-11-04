@@ -5,7 +5,7 @@ __________________________________________
 
 **School Year (Mine & [Michael's](https://github.com/mwein99)):** Freshman @ University of Maryland (class of 2021) </br>
 
-## Site Will Be Live At : http://www.ifihadinvestedincrypto.com/
+## Site Will Be Live At : https://ifihadinvestedincrypto.herokuapp.com/
 <b>Note:</b> The site will take about 5-10 seconds to load since it is running on a free Heroku Dyno. A Heroku Dyno basically follows a ServiceBus-Worker architecture where requests will be recieved by a client facing Web Role that directs them to a ServiceBus which holds a Queue of requests to be processed. The Worker Role will then poll the ServiceBus queue and have the business logic to process requests and do whatever (persist data to db, fetch stuff, etc.). This design allows for efficient scaling of operations. The web and worker roles are what make an application up so "application" is a blanket term for a system of multiple cooperating parts.
 
 When you have a free Heroku plan, the web dynos sleep leading to bad loading time on first request since the dyno has to "wake-up". After a period of inactivity it will sleep again. This is why the loading sucks. [More On Dynos Here](https://www.heroku.com/dynos)
